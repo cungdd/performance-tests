@@ -20,6 +20,6 @@ set -x
 docker run -it --rm --network host --name tb-perf-test \
            --env REST_URL=http://127.0.0.1:8080 \
            --env MQTT_HOST=127.0.0.1 \
-           --env DEVICE_END_IDX=1111 \
+           --env DEVICE_END_IDX=5000 \
            --env TEST_PAYLOAD_TYPE=SMART_TRACKER \
            thingsboard/tb-ce-performance-test:latest
