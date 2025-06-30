@@ -45,9 +45,9 @@ public class SmartMeterTelemetryGenerator extends BaseMessageGenerator implement
             }
             tsNode.put("ts", System.currentTimeMillis());
             ObjectNode values = tsNode.putObject("values");
-            values.put("pulseCounter", random.nextInt(1000000));
-            values.put("leakage", random.nextInt(100) > 1);  // leakage true in 1% cases
-            values.put("batteryLevel", shouldTriggerAlarm ? BATTERY_LEVEL_ALARM : random.nextInt(50) + 50);
+            values.put("onoff", random.nextInt(2));
+            values.put("dim", random.nextInt(101));
+            values.put("cct", random.nextInt(256));
             payload = mapper.writeValueAsBytes(data);
         } catch (Exception e) {
             log.warn("Failed to generate message", e);

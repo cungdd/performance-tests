@@ -29,5 +29,5 @@ pom.xml.versionsBackup
 **/build
 **/target
 **/Californium.properties
-**/.env
+# **/.env
 **/src/main/resources/models

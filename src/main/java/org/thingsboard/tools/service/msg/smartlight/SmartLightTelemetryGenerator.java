@@ -24,7 +24,7 @@ import org.thingsboard.tools.service.msg.MessageGenerator;
 import org.thingsboard.tools.service.msg.Msg;
 
 @Slf4j
-@Service
+@Service(value = "randomTelemetryGenerator")
 @ConditionalOnProperty(prefix = "test", value = "payloadType", havingValue = "SMART_LIGHT")
 public class SmartLightTelemetryGenerator extends BaseSmartLightGenerator implements MessageGenerator {
 
